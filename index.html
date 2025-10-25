@@ -1,63 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Welcome</title>
-  <meta property="og:title" content="Welcome" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUW AUTO | Coming Soon</title>
+  <meta name="description" content="KUW AUTO (PVT) LTD – Website launching soon." />
+  <meta property="og:title" content="KUW AUTO (PVT) LTD" />
+  <meta property="og:description" content="Website launching soon." />
   <meta property="og:image" content="desktop.jpg" />
 
- <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: #000; /* optional background */
-  }
+  <style>
+    /* Reset and base layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-  /* Center image and fill screen */
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    /* Desktop and mobile images */
+    .desktop, .mobile {
+      display: none;
+      max-width: 100vw;
+      max-height: 100vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
 
-  img {
-    width: 100vw;          /* fill width */
-    height: 100vh;         /* fill full screen height */
-    object-fit: cover;     /* scale image to cover fully */
-  }
+    /* Desktop by default */
+    .desktop {
+      display: block;
+    }
 
-  /* Optional text overlay */
-  .caption {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #d4a351;
-    font-family: system-ui, sans-serif;
-    font-size: 14px;
-    opacity: 0.8;
-  }
+    /* Switch to mobile on small screens */
+    @media (max-width: 768px) {
+      .desktop { display: none; }
+      .mobile { display: block; }
+    }
 
-  /* If using separate mobile and desktop images */
-  .desktop { display: block; }
-  .mobile { display: none; }
-  @media (max-width: 768px) {
-    .desktop { display: none; }
-    .mobile { display: block; }
-  }
-</style>
-
+    /* Optional caption (can delete if not needed) */
+    .caption {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #d4a351;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      opacity: 0.8;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <img src="desktop.jpg" alt="Welcome – desktop view" class="desktop">
-  <img src="mobile.jpg" alt="Welcome – mobile view" class="mobile">
+  <!-- Replace filenames below with your actual images -->
+  <img src="desktop.jpg" alt="KUW AUTO – Desktop View" class="desktop">
+  <img src="mobile.jpg" alt="KUW AUTO – Mobile View" class="mobile">
+
+  <!-- Optional footer text -->
+  <div class="caption">Website launching soon • KUW AUTO (PVT) LTD</div>
 </body>
 </html>
-
-
-
